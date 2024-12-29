@@ -1,3 +1,0 @@
-[submodule "roles/nginx-role"]
-	path = roles/nginx-role
-	url = https://gitlab.com/avbmfff/nginx-role
