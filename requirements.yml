@@ -1,0 +1,9 @@
+---
+- src: git+https://gitlab.com/avbmfff/docker-role.git
+  name: docker
+
+- src: git+https://gitlab.com/avbmfff/django_deploy.git
+  name: django_deploy
+
+- src: git+https://gitlab.com/avbmfff/nginx-role.git
+  name: nginx
