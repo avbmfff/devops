@@ -1,0 +1,11 @@
+openvpn_port: 1194
+openvpn_protocol: udp
+openvpn_network: 10.8.0.0
+openvpn_netmask: 255.255.255.0
+openvpn_gateway: 10.8.0.1
+openvpn_user: nobody
+openvpn_group: nogroup
+openvpn_client_name: client
+openvpn_server_cert: /etc/openvpn/server.crt
+openvpn_server_key: /etc/openvpn/server.key
+openvpn_dh_param: /etc/openvpn/dh2048.pem

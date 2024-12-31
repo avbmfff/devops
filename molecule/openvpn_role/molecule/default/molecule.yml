@@ -1,0 +1,27 @@
+---
+dependency:
+  name: galaxy
+  options: 
+    role-file: requirements.yml
+
+driver:
+  name: vagrant
+
+provisioner: 
+  name: ansible
+
+platforms:
+  - name: instance
+    image: ubuntu:20.04   # Выберите нужный образ, например, Ubuntu 20.04
+    pre_build_image: true
+    command: /sbin/init
+    network_mode: bridge
+    privileged: true
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    instance_yaml:
+      container:
+        name: instance
+verifier:
+  name: ansible
+

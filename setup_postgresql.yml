@@ -1,4 +1,0 @@
-- name: Setup PostgreSQL
-  hosts: db
-  roles:
-    - role: roles/postgresql
