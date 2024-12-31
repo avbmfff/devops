@@ -1,0 +1,11 @@
+---
+- name: Verify OpenVPN is running
+  command: systemctl is-active openvpn@server
+  register: result
+  failed_when: result.stdout != "active"
+
+- name: Verify client configuration file is created
+  stat:
+    path: "{{ playbook_dir }}/{{ openvpn_client_name }}.ovpn"
+  register: result
+  failed_when: not result.stat.exists

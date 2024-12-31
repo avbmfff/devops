@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: "OpenVpn"
+      ansible.builtin.debug:
+        msg: "This is the effective test"
+  roles: 
+    - openvpn

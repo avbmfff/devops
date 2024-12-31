@@ -1,0 +1,21 @@
+client
+dev tun
+proto {{ openvpn_protocol }}
+remote {{ inventory_hostname }} {{ openvpn_port }}
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+remote-cert-tls server
+cipher AES-256-CBC
+auth SHA256
+<ca>
+{{ lookup('file', '/etc/openvpn/ca.crt') }}
+</ca>
+<cert>
+{{ lookup('file', '/etc/openvpn/{{ openvpn_client_name }}.crt') }}
+</cert>
+<key>
+{{ lookup('file', '/etc/openvpn/{{ openvpn_client_name }}.key') }}
+</key>
+
