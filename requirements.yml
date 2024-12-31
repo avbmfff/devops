@@ -1,0 +1,3 @@
+---
+- src: git+https://gitlab.com/avbmfff/postgres.git
+  name: postgres
